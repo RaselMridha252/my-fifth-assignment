@@ -55,9 +55,15 @@ function changeBackgroundColor() {
 
 document.querySelector('.circle-button').addEventListener('click', changeBackgroundColor); 
 
+// ---------------------------------------------------------------------
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    const dateCard = document.getElementById("date-card");
+    const currentDate = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    dateCard.innerText = currentDate.toLocaleDateString('en-US', options);
+});
 
 
 
