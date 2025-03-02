@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             const currentDateTime = new Date().toLocaleString();
             const logEntry = document.createElement('div');
-            logEntry.textContent = `You have completed the taks at: ${currentDateTime}`;
+            logEntry.textContent = `You have completed the taks: ${currentDateTime}`;
                 activityLogElement.appendChild(logEntry);
         });
     });
@@ -30,3 +30,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
         activityLogElement.innerHTML = '';
     });
 });
+
+// ---------------------------------------------------------------------------
+
+document.getElementById('discover-button').addEventListener('click', function() {
+    
+    window.location.href = 'question.html';
+});
+
+// --------------------------------------------------------------------------------
+
+function getRandomColor() { 
+    const letters = '0123456'; 
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 7)];
+    }
+    return color;
+}
+
+function changeBackgroundColor() { 
+    document.body.style.backgroundColor = getRandomColor();
+}
+
+document.querySelector('.circle-button').addEventListener('click', changeBackgroundColor); 
+
+
+
+
+
+
+
+
+

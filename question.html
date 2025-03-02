@@ -28,8 +28,8 @@
                   </div>
             </div>
             
-            <div class="navbar-end">
-              <a class="btn bg-blue-600 text-white">Back to Desk</a>
+            <div class="navbar-end" >
+              <a class="btn bg-blue-600 text-white" id="backToDesk">Back to Desk</a>
             </div>
           </div>
     </nav>
@@ -66,25 +66,14 @@
     </section>
     
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Page</title>
-</head>
-<body>
-    <!-- Other contents of your question.html page -->
-
-    <button id="back-to-desk">Back to Desk</button>
+    
+    
 
     <script>
-        document.getElementById('back-to-desk').addEventListener('click', function() {
-            window.history.back(); // এটি আগের পেজে ফিরে যাওয়ার জন্য ব্যবহৃত হবে
+        const backToDeskButton = document.getElementById('backToDesk');
+        backToDeskButton.addEventListener('click', function() {
+            window.history.back();
         });
     </script>
-</body>
-</html>
-
 </body>
 </html>
